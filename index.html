@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Energy | Reliable Solar Solutions Zimbabwe</title>
+    <link rel="icon" type="image/png" href="https://i.imgur.com/U88yszP.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glow-green: #1a5d40;
+            --glow-yellow: #f9bf15;
+            --glow-white: #ffffff;
+            --glow-dark: #121212;
+        }
+
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        .font-oswald { font-family: 'Oswald', sans-serif; }
+
+        /* Glassmorphism Navbar */
+        .nav-glass {
+            background: rgba(26, 93, 64, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hero Slider Effects */
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out, transform 2s ease-in-out;
+            transform: scale(1.1);
+        }
+        .slide.active { opacity: 1; transform: scale(1); }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(18, 18, 18, 0.8) 0%, rgba(26, 93, 64, 0.4) 100%);
+        }
+
+        /* Stats Bar Gradient */
+        .stats-gradient {
+            background: linear-gradient(135deg, var(--glow-green) 0%, #0d3d2a 100%);
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* Lightbox */
+        #lightbox.active { display: flex; animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <nav class="nav-glass fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://i.imgur.com/U88yszP.jpeg" alt="Glow Energy Logo" class="h-12 w-auto rounded-sm shadow-lg">
+                <span class="text-white font-oswald text-2xl tracking-tighter uppercase hidden sm:block">Glow Energy</span>
+            </div>
+            <div class="hidden md:flex gap-10 text-white text-xs font-bold uppercase tracking-widest">
+                <a href="#home" class="hover:text-[#f9bf15] transition">Home</a>
+                <a href="#services" class="hover:text-[#f9bf15] transition">Services</a>
+                <a href="#portfolio" class="hover:text-[#f9bf15] transition">Projects</a>
+                <a href="#contact" class="hover:text-[#f9bf15] transition">Contact</a>
+            </div>
+            <a href="https://wa.me/263772515630" class="bg-[#f9bf15] text-[#1a5d40] px-6 py-3 rounded-sm font-bold text-xs uppercase tracking-tighter hover:bg-white transition">Get Quote</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen w-full overflow-hidden bg-black">
+        <div class="slides-container h-full">
+            <div class="slide active bg-cover bg-center" style="background-image: url('https://i.imgur.com/6LNw7V8.jpeg');"></div>
+            <div class="slide bg-cover bg-center" style="background-image: url('https://i.imgur.com/KKwqmhI.jpeg');"></div>
+            <div class="slide bg-cover bg-center" style="background-image: url('https://i.imgur.com/qMF1TnR.jpeg');"></div>
+        </div>
+        
+        <div class="hero-overlay absolute inset-0 z-10 flex items-center">
+            <div class="max-w-7xl mx-auto px-6 w-full">
+                <div class="max-w-3xl">
+                    <span class="text-[#f9bf15] font-bold tracking-[0.5em] uppercase text-sm mb-6 block opacity-0 translate-y-4 transition-all duration-1000 delay-300" id="hero-sub">Empowering Zimbabwe</span>
+                    <h1 class="text-white font-oswald text-5xl md:text-7xl font-bold leading-tight mb-8 uppercase opacity-0 translate-y-4 transition-all duration-1000 delay-500" id="hero-title">
+                        Affordable & Reliable <br> <span class="text-[#f9bf15]">Solar Energy</span> Solutions
+                    </h1>
+                    <p class="text-gray-300 text-lg mb-10 opacity-0 translate-y-4 transition-all duration-1000 delay-700" id="hero-desc">
+                        Custom designed energy systems to meet individual and corporate requirements. Quality you can trust, directly in the heart of Harare.
+                    </p>
+                    <div class="flex flex-wrap gap-4 opacity-0 translate-y-4 transition-all duration-1000 delay-900" id="hero-btns">
+                        <a href="#services" class="bg-[#1a5d40] border border-[#1a5d40] text-white px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-transparent hover:border-white transition">View Solutions</a>
+                        <a href="https://wa.me/263772515630" class="border border-white text-white px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-[#f9bf15] hover:border-[#f9bf15] hover:text-[#1a5d40] transition">WhatsApp Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-gradient py-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <span class="block text-[#f9bf15] font-oswald text-4xl font-bold">500+</span>
+                <span class="text-white/70 uppercase text-[10px] tracking-[0.2em] font-bold">Clients Served</span>
+            </div>
+            <div>
+                <span class="block text-[#f9bf15] font-oswald text-4xl font-bold">100%</span>
+                <span class="text-white/70 uppercase text-[10px] tracking-[0.2em] font-bold">Reliability Rate</span>
+            </div>
+            <div>
+                <span class="block text-[#f9bf15] font-oswald text-4xl font-bold">Harare</span>
+                <span class="text-white/70 uppercase text-[10px] tracking-[0.2em] font-bold">Local Support</span>
+            </div>
+            <div>
+                <span class="block text-[#f9bf15] font-oswald text-4xl font-bold">Zim</span>
+                <span class="text-white/70 uppercase text-[10px] tracking-[0.2em] font-bold">Built & Owned</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="services" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-[#1a5d40] font-oswald text-4xl font-bold uppercase mb-4">Our Services</h2>
+                <div class="h-1.5 w-20 bg-[#f9bf15] mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-10 border-b-4 border-[#1a5d40] shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-[#f9bf15] mb-6 text-3xl">⚡</div>
+                    <h3 class="font-oswald text-xl font-bold uppercase mb-4">Residential Solar</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Turn your home into a powerhouse. Affordable backup and full off-grid systems for Zimbabwean homes.</p>
+                </div>
+                <div class="bg-white p-10 border-b-4 border-[#f9bf15] shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-[#1a5d40] mb-6 text-3xl">🏢</div>
+                    <h3 class="font-oswald text-xl font-bold uppercase mb-4">Commercial Backup</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Keep your business running 24/7. High-capacity industrial solutions custom designed for your HQ.</p>
+                </div>
+                <div class="bg-white p-10 border-b-4 border-[#1a5d40] shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-[#f9bf15] mb-6 text-3xl">🚜</div>
+                    <h3 class="font-oswald text-xl font-bold uppercase mb-4">Borehole Solar</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Solar pumping solutions for farms and plots. Reliable water supply without reliance on the grid.</p>
+                </div>
+                <div class="bg-white p-10 border-b-4 border-[#f9bf15] shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-[#1a5d40] mb-6 text-3xl">🛠️</div>
+                    <h3 class="font-oswald text-xl font-bold uppercase mb-4">Maintenance</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Expert panel cleaning, battery health checks, and system optimization for peak efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-[#1a5d40] font-oswald text-4xl font-bold uppercase">Recent Projects</h2>
+                    <p class="text-gray-500 mt-2">Quality installations across Harare and beyond.</p>
+                </div>
+                <a href="https://www.facebook.com/glowenerg/" class="text-[#1a5d40] font-bold text-xs uppercase tracking-widest border-b-2 border-[#f9bf15] pb-1">View All on Facebook</a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="overflow-hidden h-80 cursor-pointer group rounded-sm" onclick="openLightbox('https://i.imgur.com/PkPfh3O.jpeg')">
+                    <img src="https://i.imgur.com/PkPfh3O.jpeg" alt="Solar Installation" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="overflow-hidden h-80 cursor-pointer group rounded-sm" onclick="openLightbox('https://i.imgur.com/Fohxx3s.jpeg')">
+                    <img src="https://i.imgur.com/Fohxx3s.jpeg" alt="Solar Installation" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="overflow-hidden h-80 cursor-pointer group rounded-sm" onclick="openLightbox('https://i.imgur.com/qMF1TnR.jpeg')">
+                    <img src="https://i.imgur.com/qMF1TnR.jpeg" alt="Solar Installation" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="overflow-hidden h-80 cursor-pointer group rounded-sm" onclick="openLightbox('https://i.imgur.com/8WqsVtM.jpeg')">
+                    <img src="https://i.imgur.com/8WqsVtM.jpeg" alt="Solar Installation" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="overflow-hidden h-80 cursor-pointer group rounded-sm" onclick="openLightbox('https://i.imgur.com/gIDY8Yy.jpeg')">
+                    <img src="https://i.imgur.com/gIDY8Yy.jpeg" alt="Solar Installation" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="bg-[#1a5d40] flex items-center justify-center p-10 text-center rounded-sm">
+                    <div>
+                        <h4 class="text-[#f9bf15] font-oswald text-2xl uppercase font-bold mb-4">Diaspora Friendly</h4>
+                        <p class="text-white/80 text-sm">We accept international payments. Secure your family's power from anywhere in the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-[#121212] py-24 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div>
+                <h2 class="font-oswald text-5xl font-bold uppercase mb-8">Ready to <br><span class="text-[#f9bf15]">Start Your Journey?</span></h2>
+                <div class="space-y-8">
+                    <div class="flex items-start gap-6">
+                        <div class="bg-[#1a5d40] p-4 rounded-sm">📍</div>
+                        <div>
+                            <h4 class="font-bold text-[#f9bf15] uppercase text-xs tracking-widest mb-1">Visit Our Office</h4>
+                            <p class="text-gray-400">17432 Chiremba Rd, Harare, Zimbabwe</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="bg-[#1a5d40] p-4 rounded-sm">📞</div>
+                        <div>
+                            <h4 class="font-bold text-[#f9bf15] uppercase text-xs tracking-widest mb-1">Call / WhatsApp</h4>
+                            <p class="text-gray-400">+263 77 251 5630</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/5 p-10 rounded-sm border border-white/10 backdrop-filter blur-sm">
+                <h3 class="font-oswald text-2xl uppercase mb-6">Inquire Directly</h3>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Full Name" class="w-full bg-white/10 border-none p-4 rounded-sm focus:ring-2 focus:ring-[#f9bf15] outline-none">
+                    <input type="email" placeholder="Email Address" class="w-full bg-white/10 border-none p-4 rounded-sm focus:ring-2 focus:ring-[#f9bf15] outline-none">
+                    <textarea placeholder="Tell us about your requirements..." rows="4" class="w-full bg-white/10 border-none p-4 rounded-sm focus:ring-2 focus:ring-[#f9bf15] outline-none"></textarea>
+                    <button class="w-full bg-[#f9bf15] text-[#1a5d40] font-bold py-4 uppercase tracking-widest hover:bg-white transition">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:row justify-between items-center gap-6">
+            <p class="text-gray-500 text-xs uppercase tracking-widest">© 2026 Glow Energy — Reliable Energy Solutions</p>
+            <div class="flex gap-6">
+                <a href="https://www.facebook.com/glowenerg/" class="text-gray-400 hover:text-[#f9bf15] transition">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-[#f9bf15] transition">Instagram</a>
+            </div>
+            <p class="text-gray-600 text-[10px] uppercase font-bold tracking-widest">Developed by ZimWeblify</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/263772515630" class="whatsapp-float">
+        <div class="bg-[#25d366] p-4 rounded-full shadow-2xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-white fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+    </a>
+
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[2000] hidden items-center justify-center p-4" onclick="closeLightbox()">
+        <img id="lightbox-img" class="max-w-full max-h-[85vh] shadow-2xl rounded-sm">
+        <span class="absolute top-10 right-10 text-white text-4xl cursor-pointer">&times;</span>
+    </div>
+
+    <script>
+        // Hero Animation Initializer
+        window.onload = () => {
+            ['hero-sub', 'hero-title', 'hero-desc', 'hero-btns'].forEach(id => {
+                const el = document.getElementById(id);
+                el.classList.remove('opacity-0', 'translate-y-4');
+            });
+        }
+
+        // Slider Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(nextSlide, 6000);
+
+        // Lightbox Logic
+        function openLightbox(url) {
+            const lb = document.getElementById('lightbox');
+            document.getElementById('lightbox-img').src = url;
+            lb.classList.add('active');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Nav Scroll Effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.padding = '5px 0';
+                nav.style.background = 'rgba(26, 93, 64, 0.98)';
+            } else {
+                nav.style.padding = '0';
+                nav.style.background = 'rgba(26, 93, 64, 0.85)';
+            }
+        });
+    </script>
+</body>
+</html>
